@@ -1,0 +1,36 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+using namespace std;
+
+bool isKeyword(string word) {
+    return (word == "int" || word == "float" || word == "double" || word == "char");
+}
+
+bool isOperator(string word) {
+    return (word == "+" || word == "-" || word == "*" || word == "/" || word == "=");
+}
+
+bool isSymbol(string word) {
+    return (word == ";");
+}
+
+bool isNumber(string word) {
+    for (char c : word) {
+        if (!isdigit(c)) return false;
+    }
+    return true;
+}
+
+int main() {
+    string input = "This is a int sum = 10; and a + b = 20;";
+    stringstream ss(input);
+    string word;
+
+    cout << "Token\tType\n";
+    cout << "------------------\n";
+
+    while (ss >> word) {
+        if (word.back() == ';') {
+            string num = word.substr(0, word.length() - 1);
