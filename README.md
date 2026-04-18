@@ -1,1 +1,19 @@
 # Compiler-design--53
+
+Token           Type
+                                                -------------------------------
+                                                   This            Identifier
+                                                   is              Identifier
+                                                   a               Identifier
+                                                   int             Keyword
+                                                   sum             Identifier
+                                                   =               Operator
+                                                   10              Number
+                                                   ;               Symbol
+                                                   and             Identifier
+                                                   a               Identifier
+                                                   +               Operator
+                                                   b               Identifier
+                                                   =               Operator
+                                                   20              Number
+                                                  ;               Symbol
